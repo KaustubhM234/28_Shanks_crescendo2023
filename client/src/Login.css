@@ -1,0 +1,77 @@
+.heading1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.heading1 p {
+  color: #828282;
+}
+
+
+
+.form1,
+
+
+.form1-group {
+  margin-bottom: 10px;
+  margin-left: 290px;
+  width: 390px;
+}
+
+.form1-group input,
+.form1-group textarea,
+.form1-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form1-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+  
+}
+
+.btn1 {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #f2a22a;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: left;
+  
+  justify-content: center;
+}
+
+.btn1 svg {
+  margin-right: 8px;
+}
+
+.btn1-reverse {
+  background: #fff;
+  color: #000;
+}
+
+.btn1-block {
+  width: 50%;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.btn1:hover {
+  transform: scale(0.98);
+}
+
