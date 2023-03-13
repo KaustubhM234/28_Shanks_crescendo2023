@@ -1,6 +1,7 @@
 import React from "react"
 import "./courses.css"
 import { coursesCard } from "../../dummydata"
+import {Link} from "react-router-dom"
 
 const CoursesCard = () => {
   return (
@@ -47,7 +48,9 @@ const CoursesCard = () => {
                   {val.priceAll} / {val.pricePer}
                 </h3>
               </div>
-              <button className='outline-btn'>ENROLL NOW !</button>
+              <a href="https://www.youtube.com/watch?v=PkI4n8EPjJY&list=PLjVLYmrlmjGcyy-YEVdWCJ0ZqQwL5Y38a" target="_blank" rel="noopener noreferrer">
+                <button className='outline-btn'>WATCH NOW !</button>
+              </a>
             </div>
           ))}
         </div>

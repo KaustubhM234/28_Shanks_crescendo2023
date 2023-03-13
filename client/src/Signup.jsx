@@ -23,7 +23,7 @@ function Register() {
         }
 
         if(json.success){
-          navigate("/")
+          navigate("/logins")
         }
   }
 

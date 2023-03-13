@@ -21,6 +21,7 @@ app.use((req,res,next)=>{
 });
 app.use(express.json())
 app.use('/api',require("./Routes/userRoutes"));
+app.use('/api',require("./Routes/contactRoutes"));
 app.use('/api',require("./Routes/courseRoutes"));
 
 app.listen(port,()=>console.log(`Server is listening to port: ${port}`))

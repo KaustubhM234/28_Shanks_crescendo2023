@@ -2,10 +2,15 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import Head from "./Head"
 import "./header.css"
+import { useNavigate } from "react-router-dom"
 
 const Header = () => {
   const [click, setClick] = useState(false)
-
+  const navigate = useNavigate();
+  const handleLogout = () =>{
+    localStorage.removeItem("authToken");
+    navigate("/logins")
+  }
   return (
     <>
       <Head />
@@ -33,13 +38,21 @@ const Header = () => {
             <li>
               <Link to='/contact'>Contact</Link>
             </li>
-            <li>
-              <Link to='/logins'>Logout</Link>
-            </li>
           </ul>
-          <div className='start'>
-            <Link to='/courses' className='button'>GET CERTIFIED</Link>
+          {(!localStorage.getItem("authToken"))?
+          <div style={{position:'inline',marginRight:'0px',padding:'0px'}}>
+          <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
+          <li>
+              <Link to='/logins'><h3>Login</h3></Link>
+          </li>
+          <li>
+              <Link to='/signups'><h3>Signup</h3></Link>
+          </li>
+          </ul>
           </div>
+          : <div className='start' onClick={handleLogout}>
+            <h3>Logout</h3>
+            </div>}
           <button className='toggle' onClick={() => setClick(!click)}>
             {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars'></i>}
           </button>
